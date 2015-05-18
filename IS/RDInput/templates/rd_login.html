@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Related Department - Singapore Crisis Management System</title>
+
+    <link rel='stylesheet' href='/static/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/static/stylesheets/report.css' />
+</head>
+<body>
+<div class="container">
+    <h1>Related Department - Login</h1>
+    <div class="row">
+        <div class="col-sm-5 col-sm-offset-3">
+            <form action="./rd">
+                <div class="form-group">
+                    <label>Department</label>
+                    <select name="rd" class="form-control">
+                        <option value="fire">SCDF(Fire)</option>
+                        <option value="dengue">Dengue</option>
+                        <option value="dengue">Dengue</option>
+                        <option value="illness">Illness or Injury</option>
+                        <option value="rescue">Rescue and Evacuation</option>
+                        <option value="gas">Gas Leak</option>
+                        <option value="haze">Haze (Testing)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Account</label>
+                    <input class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://gothere.sg/jsapi?sensor=false"></script>
+
+<script src="/static/javascripts/jquery-2.1.0.min.js"></script>
+<script src="/static/javascripts/bootstrap.min.js"></script>
+</body>
+</html>

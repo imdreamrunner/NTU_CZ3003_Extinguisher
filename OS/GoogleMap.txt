@@ -1,0 +1,20 @@
+Google Map API
+
+What we can get from it:
+
+
+
+(1) Searching for places with text, which is useful for calling centre.
+
+
+
+(2) Get the lat&lng of a place, either by search or clicking/touching the map.
+
+
+
+(3) Mark the map with different icons.
+
+
+
+(4) Drawing arbitrary shape on the map using polygons. Examples can be found here.
+    (https://developers.google.com/maps/documentation/javascript/shapes#polygons)

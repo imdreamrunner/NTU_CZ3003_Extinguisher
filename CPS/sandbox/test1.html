@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<script>
+function id(n){return document.getElementById(n);}
+
+var submitCount = 0;
+
+var request = {
+    incident:{
+        "initialId": null,
+        "isLatest": true,
+        "parent": null,
+        "type": "fire",
+        "location": {},
+        "level" : 1,
+        "startTime": 1395303331903,
+        "completeTime": null,
+        "isValid": true,
+        "reporter": {"name":"reporter1"},
+        "remark": "some remarks"
+    },
+    operator:{_id: "houyunqing5", password:"1234"}
+}
+
+alert(JSON.stringify(request));
+var reqstr = JSON.stringify(request);
+
+function submit(){
+    var url = id("url").value;
+    var body= id("postBody").value;
+    var ajax=new XMLHttpRequest();
+    ajax.onreadystatechange=function(){
+        if(ajax.readyState==4 && ajax.status==200){
+            id("postResponse").innerHTML = ajax.responseText;
+            id("statusMsg").innerHTML="response received (requestID="+submitCount+")";
+        }
+    }
+    submitCount++;
+    ajax.open("POST", url, true);
+    ajax.setRequestHeader('Content-Type', 'text/plain');
+    ajax.send(body);
+    id("statusMsg").innerHTML="request sent (requestID="+submitCount+")";
+}
+function onload(){
+    id("postBody").value = reqstr;
+}
+
+</script>
+</head>
+
+<body id="xxx" onload="onload()">
+<input id="url" style="width:500px;" value="http://localhost:8080/"></input>
+<br/>
+post body
+<br/>
+<textarea id="postBody" style="width:500px;height:250px;">
+</textarea>
+<br/>
+post response 
+<br/>
+<textarea id="postResponse" style="width:500px;height:250px;">
+</textarea>
+<br/>
+<input type=button value="submit" onClick="submit()"/>
+<span id="statusMsg"></span>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+CSRF_ENABLED = True
+SECRET_KEY = 'CZ3003_Extinguisher'
+
+<<<<<<< HEAD
+SQLALCHEMY_DATABASE_URI = 'mysql://extinguisher:extinguisher@127.0.0.1/subscription'
+=======
+SQLALCHEMY_DATABASE_URI = 'mysql://extinguisher:extinguisher@127.0.0.1/subscription'
+>>>>>>> e70d3827a27bee48ee8ff9a1dafd4cddd99dc573

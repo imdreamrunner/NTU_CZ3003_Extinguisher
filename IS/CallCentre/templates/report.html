@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Report Centre - Singapore Crisis Management System</title>
+
+    <link rel='stylesheet' href='/static/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/static/stylesheets/report.css' />
+</head>
+<body>
+<div class="container">
+    <h1>Report Centre</h1>
+    <div class="row">
+        <form id="incident-detail">
+            <div class="col-sm-5">
+                <hr />
+                <h4>Incident Info</h4>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <label for="type">Type</label>
+                            <select id="type" name="type" class="form-control">
+                                <option value="fire">Fire</option>
+                                <option value="dengue">Dengue</option>
+                                <option value="illness">Illness or Injury</option>
+                                <option value="rescue">Rescue and Evacuation</option>
+                                <option value="gas">Gas Leak</option>
+                                <!--
+                                <option value="haze">Haze (Testing)</option>
+                                -->
+                            </select>
+                        </div>
+                        <div class="col-xs-4">
+                            <label for="level">Level</label>
+                            <select id="level" name="level" class="form-control">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="location">Address</label>
+                    <input id="location" name="location" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="remark">Remark</label>
+                    <textarea id="remark" name="remark" class="form-control"></textarea>
+                </div>
+                <hr />
+                <h4>Reporter Info</h4>
+                <div class="form-group">
+                    <label for="reporter-name">Name</label>
+                    <input id="reporter-name" name="reporter-name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="reporter-phone">Phone</label>
+                    <input id="reporter-phone" name="reporter-phone" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <hr />
+                <h4>Location</h4>
+                <div id="location-picker">
+                    <div class="input-group">
+                        <input id="search-map" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Search</button>
+                        </span>
+                    </div>
+                    <div id="map"></div>
+                    <div id="location-info">
+                        Lat: <input name="lat" id="lat">
+                        Lng: <input name="lng" id="lng">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://gothere.sg/jsapi?sensor=false"></script>
+
+<script src="/static/javascripts/jquery-2.1.0.min.js"></script>
+<script src="/static/javascripts/bootstrap.min.js"></script>
+<script src="/static/javascripts/map.js"></script>
+<script src="/static/javascripts/report.js"></script>
+</body>
+</html>

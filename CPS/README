@@ -1,0 +1,30 @@
+CPS
+=================
+
+To run CPS, create a new Java Project in Eclipse, and the home directory of the
+new project should be the CPS directory in which this README file is located. Do
+not use extinguisher's top directory directly as the Eclipse project directory.
+Use top(where CPS, IS, OS are located)/CPS as home directory for Eclipse
+project.
+
+After the project is created with the correct home directory, the source code
+and libraries should be automatically loaded. And you just need to supply
+command line argument to Eclipse: Run->Run Configuration-> command line argument
+Fill in the following:
+wFramework.serviceImpl1.DefaultSystemService cms.config1.DefaultConfigBuilder
+
+Alternatively, you can start running using commandline from CPS/bin/. CPS/bin/
+is created by Eclipse automatically when it compiles our source code.
+
+cd CPS/bin
+java -classpath .:../libs/* misc.SystemEntry wFramework.serviceImpl1.DefaultSystemService cms.config1.DefaultConfigBuilder
+
+Note that the main function is in the misc package, SystemEntry.java
+
+after that you can click Run, open your browser and enter:
+http://localhost:8080/kill
+http://localhost:8080/test1
+http://localhost:8080/incident
+http://localhost:8080/request
+http://localhost:8080/reconfig
+http://localhost:8080/register

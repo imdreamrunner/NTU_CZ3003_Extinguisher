@@ -1,0 +1,6 @@
+#map {
+  height: 360px;
+}
+#map * {
+  vertical-align: baseline;
+}

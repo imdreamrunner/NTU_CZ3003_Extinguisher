@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Related Department - Singapore Crisis Management System</title>
+
+    <link rel='stylesheet' href='/static/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/static/stylesheets/simPop.css' />
+    <script>
+        window.rd = "{{ rd }}";
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>Related Department - Update Incidents</h1>
+    <hr />
+    <ul id="incident-list">
+        Loading...
+    </ul>
+    <script id="incident-list-template" type="text/html">
+        <%
+        for (var i = 0; i < incidents.length; i++) {
+            var incident = incidents[i];
+        %>
+        <li>
+            <div><%- incident['id'] %></div>
+            <div><%- incident['strLocation'] %></div>
+            <a href="javascript:" onclick="updateIncident('<%- incident['id'] %>')" class="btn btn-primary">Update</a>
+            <a href="javascript:" onclick="completeIncident('<%- incident['id'] %>')" class="btn btn-danger">Complete</a>
+        </li>
+        <%
+        }
+        %>
+    </script>
+</div>
+
+
+<script id="incident-display-template" type="text/html">
+    <form>
+        <div class="form-group">
+            <label>Incident Id</label>
+            <input name='initialId' class='form-control' value="<%- incident['initialId'] %>" readonly>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label>Type</label>
+                        <select name="type" class="form-control">
+                            <option value="fire">Fire</option>
+                            <option value="dengue">Dengue</option>
+                            <option value="">Illness or Injury</option>
+                            <option value="">Rescue and Evacuation</option>
+                            <option value="">Gas Leak</option>
+                        </select>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label>Level</label>
+                        <select name="level" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Location</label>
+            <input name='location' class='form-control' value="<%- incident['string-location']['location'] %>">
+        </div>
+        <div class="form-group">
+            <label>GPS location</label>
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Lat
+                        </span>
+                        <input name='lat' class='form-control' value="<%- incident['gps-location']['lat'] %>">
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Lng
+                        </span>
+                        <input name='lng' class='form-control' value="<%- incident['gps-location']['lng'] %>">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Remark</label>
+            <input name='remark' class='form-control' value="<%- incident['remark'] %>">
+        </div>
+        <div class="form-group">
+            <a href="javascript:" class="btn btn-primary btn-update">Update</a>
+        </div>
+    </form>
+</script>
+
+
+<script id="simPop-template" type="text/html">
+    <div class="header">
+        <div class="close-button">
+            <span class="glyphicon glyphicon-remove"></span>
+        </div>
+        <div class="title"></div>
+    </div>
+    <div class="body">
+        <div class="content-wrap">
+            <div class="content"></div>
+        </div>
+    </div>
+</script>
+
+<script src="/static/javascripts/jquery-2.1.0.min.js"></script>
+<script src="/static/javascripts/bootstrap.min.js"></script>
+<script src="/static/javascripts/underscore-min.js"></script>
+<script src="/static/javascripts/rd.js"></script>
+<script src="/static/javascripts/simPop.js"></script>
+</body>
+</html>

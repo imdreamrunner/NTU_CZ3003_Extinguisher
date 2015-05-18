@@ -1,0 +1,31 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/unsubscribe.css') }}">
+{% endblock %}
+
+{% block content %}
+<form action="" method="post" name="unsubscribe" class="form-signin" role="form">
+  {{form.hidden_tag()}}
+    <div>
+        <br><p>
+        <h2 align="center" class="form-signin-heading">Unsubscribe</h2>
+        {{form.handphone(size="45%",class="form_control",placeholder="Handphone Number",autofocus="")}}
+        {% for error in form.errors.handphone %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}
+        </p><p>
+        {{form.email(size="45%",class="form_control",placeholder="Email Address",autofocus="")}}
+        {% for error in form.errors.email %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}
+        </p>
+    </div>
+    <br>
+    <div style="text-align:center;">
+      <input type="submit" class="btn btn-primary" value="Submit" />
+      <input type="reset" class="btn btn-danger" value="Reset" />
+    </div>
+</form>
+{% endblock %}

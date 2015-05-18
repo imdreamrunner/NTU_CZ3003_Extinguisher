@@ -1,0 +1,30 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/verify.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/map.css') }}">
+{% endblock %}
+
+{% block content %}
+<form action="" method="post" name="VerifyHandphone" class="form-signin" role="form">
+  {{form.hidden_tag()}}
+    <div>
+        <br><p>
+        <h2 align="center" class="form-signin-heading">Verify Handphone</h2>
+        {{form.handphone_hash(size="45%",class="form_control",placeholder="Enter verification code",autofocus="")}}
+        {% for error in form.errors.handphone %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}
+        </p>
+    </div>
+    <br>
+    <div style="text-align:center;">
+      <input type="submit" class="btn btn-primary" value="Submit" />
+    </div>
+</form>
+<script type="text/javascript" src="http://gothere.sg/jsapi?sensor=false"></script>
+<script src="/static/js/jquery-2.1.0.min.js"></script>
+<script src="/static/js/map.js"></script>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/addsubscription.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/map.css') }}">
+{% endblock %}
+
+{% block content %}
+<form action="" method="post" name="addSubscription" class="form-signin" role="form">
+  {{form.hidden_tag()}}
+    <div>
+        <br><p>
+        <h2 align="center" class="form-signin-heading">Subscription Details</h2>
+        {{form.handphone(size="45%",class="form_control",placeholder="Handphone Number",autofocus="")}}
+        {% for error in form.errors.handphone %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}
+        </p>
+        <p>
+        {{form.email(size="45%",class="form_control",placeholder="Email Address",autofocus="")}}
+        {% for error in form.errors.email %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}
+        </p>
+        <div id="location-info">
+            Lat: {{form.lat(size="10%")}}
+            Lng: {{form.lng(size="10%")}}
+        </div>
+        <p></p>
+        <div id="map"></div>
+    </div>
+    <br>
+    <div style="text-align:center;">
+      <input type="submit" class="btn btn-primary" value="Submit" />
+      <input type="reset" class="btn btn-danger" value="Reset" />
+    </div>
+</form>
+<script type="text/javascript" src="http://gothere.sg/jsapi?sensor=false"></script>
+<script src="/static/js/jquery-2.1.0.min.js"></script>
+<script src="/static/js/map.js"></script>
+
+{% endblock %}

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.5" icons="true" automaticImage="JPEG">  
+  <object id="1" language="java" name="cms.config1.workflows.otherWorkflows.ActiveRequest" project="CPS_extinguisher" 
+    file="/CPS_extinguisher/src/cms/config1/workflows/otherWorkflows/ActiveRequest.java" binary="false" 
+    label="activeRequest" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="121" y="0"/>    
+    <execution id="2">      
+      <position height="1039" width="171" x="5" y="151"/>    
+    </execution>  
+  </object>  
+  <object id="5" language="java" name="cms.config1.workflows.otherWorkflows.ActiveRequest" project="CPS_extinguisher" 
+    file="/CPS_extinguisher/src/cms/config1/workflows/otherWorkflows/ActiveRequest.java" binary="false" 
+    label="&lt;static&gt;" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="4">      
+      <position height="997" width="171" x="180" y="172"/>    
+    </execution>    
+    <execution id="17">      
+      <position height="21" width="0" x="0" y="424"/>    
+    </execution>  
+  </object>  
+  <object id="52" language="java" name="wFramework.base.Context" project="CPS_extinguisher" 
+    file="/CPS_extinguisher/src/wFramework/base/Context.java" binary="false" label="ctx" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="7">      
+      <position height="21" width="0" x="0" y="193"/>    
+    </execution>    
+    <execution id="43">      
+      <position height="21" width="0" x="0" y="959"/>    
+    </execution>  
+  </object>  
+  <object id="53" language="java" name="java.util.Map" project="CPS_extinguisher" 
+    file="C:/Program Files/Java/jre7/lib/rt.jar" binary="true" label="map" type="interface" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="9">      
+      <position height="21" width="0" x="0" y="235"/>    
+    </execution>    
+    <execution id="11">      
+      <position height="21" width="0" x="0" y="277"/>    
+    </execution>  
+  </object>  
+  <object id="54" language="java" name="cms.dataClasses.QuerySpec" project="CPS_extinguisher" 
+    file="/CPS_extinguisher/src/cms/dataClasses/QuerySpec.java" binary="false" label="querySpec" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="13">      
+      <position height="21" width="0" x="0" y="319"/>    
+    </execution>    
+    <execution id="15">      
+      <position height="21" width="0" x="0" y="361"/>    
+    </execution>  
+  </object>  
+  <object id="55" language="java" name="wFramework.base.configuration.Configuration" project="CPS_extinguisher" 
+    file="/CPS_extinguisher/src/wFramework/base/configuration/Configuration.java" binary="false" label="config" 
+    type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="19">      
+      <position height="21" width="0" x="0" y="455"/>    
+    </execution>    
+    <execution id="25">      
+      <position height="21" width="0" x="0" y="581"/>    
+    </execution>    
+    <execution id="45">      
+      <position height="21" width="0" x="0" y="1001"/>    
+    </execution>  
+  </object>  
+  <object id="56" language="java" name="cms.serviceInterfaces.DatabaseService" project="CPS_extinguisher" 
+    file="/CPS_extinguisher/src/cms/serviceInterfaces/DatabaseService.java" binary="false" label="ds" type="interface" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="21">      
+      <position height="21" width="0" x="0" y="497"/>    
+    </execution>  
+  </object>  
+  <object id="57" language="java" name="com.mongodb.DBCollection" project="CPS_extinguisher" 
+    file="/CPS_extinguisher/libs/mongo-java-driver-2.11.3.jar" binary="true" label="incCol" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="23">      
+      <position height="21" width="0" x="0" y="539"/>    
+    </execution>  
+  </object>  
+  <object id="58" language="java" name="java.util.ArrayList" project="CPS_extinguisher" 
+    file="C:/Program Files/Java/jre7/lib/rt.jar" binary="true" label="output" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="27">      
+      <position height="21" width="0" x="0" y="623"/>    
+    </execution>    
+    <execution id="41">      
+      <position height="21" width="0" x="0" y="917"/>    
+    </execution>  
+  </object>  
+  <object id="59" language="java" name="com.mongodb.DBCursor" project="CPS_extinguisher" 
+    file="/CPS_extinguisher/libs/mongo-java-driver-2.11.3.jar" binary="true" label="cursor" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="29">      
+      <position height="21" width="0" x="0" y="665"/>    
+    </execution>    
+    <execution id="33">      
+      <position height="21" width="0" x="0" y="749"/>    
+    </execution>  
+  </object>  
+  <object id="60" language="java" name="cms.dataClasses.PMap" project="CPS_extinguisher" 
+    file="/CPS_extinguisher/src/cms/dataClasses/PMap.java" binary="false" label="&lt;static&gt;" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="31">      
+      <position height="21" width="0" x="0" y="707"/>    
+    </execution>    
+    <execution id="37">      
+      <position height="21" width="0" x="0" y="833"/>    
+    </execution>  
+  </object>  
+  <object id="61" language="java" name="wFramework.base.work.CompletionStatus" project="CPS_extinguisher" 
+    file="/CPS_extinguisher/src/wFramework/base/work/CompletionStatus.java" binary="false" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="35">      
+      <position height="21" width="0" x="0" y="791"/>    
+    </execution>  
+  </object>  
+  <object id="62" language="java" name="cms.serviceInterfaces.AuthenticationService" project="CPS_extinguisher" 
+    file="/CPS_extinguisher/src/cms/serviceInterfaces/AuthenticationService.java" binary="false" label="as" 
+    type="interface" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="39">      
+      <position height="21" width="0" x="0" y="875"/>    
+    </execution>  
+  </object>  
+  <object id="63" language="java" name="cms.serviceInterfaces.ErrorService" project="CPS_extinguisher" 
+    file="/CPS_extinguisher/src/cms/serviceInterfaces/ErrorService.java" binary="false" label="es" type="interface" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="47">      
+      <position height="21" width="0" x="0" y="1043"/>    
+    </execution>  
+  </object>  
+  <object id="64" language="java" name="cms.dataClasses.Errors" project="CPS_extinguisher" 
+    file="/CPS_extinguisher/src/cms/dataClasses/Errors.java" binary="false" label="&lt;static&gt;" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="49">      
+      <position height="21" width="0" x="0" y="1085"/>    
+    </execution>  
+  </object>  
+  <object id="65" language="java" name="wFramework.base.work.CompletionStatus" project="CPS_extinguisher" 
+    file="/CPS_extinguisher/src/wFramework/base/work/CompletionStatus.java" binary="false" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="51">      
+      <position height="21" width="0" x="0" y="1127"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="runInContext(wFramework.base.Context,wFramework.base.configuration.Configuration):wFramework.base.work.CompletionStatus">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="6" operation="getUnnamed(java.lang.Object):java.lang.Object">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </message>  
+  <message id="8" operation="containsKey(java.lang.Object):boolean">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="10" operation="get(java.lang.Object):V">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="12" operation="QuerySpec()">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="14" 
+    operation="validate(java.lang.Object,wFramework.base.Context,wFramework.base.configuration.Configuration):boolean">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>  
+  <message id="16" 
+    operation="convertToQueryObj(java.util.Map&lt;java.lang.String,java.lang.Object&gt;):com.mongodb.BasicDBObject">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="17"/>  
+  </message>  
+  <message id="18" operation="getService(java.lang.Class):wFramework.base.service.Service">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="19"/>  
+  </message>  
+  <message id="20" operation="getDBCollection(java.lang.String):com.mongodb.DBCollection">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="21"/>  
+  </message>  
+  <message id="22" operation="find(com.mongodb.DBObject):com.mongodb.DBCursor">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="23"/>  
+  </message>  
+  <message id="24" operation="getService(java.lang.Class):wFramework.base.service.Service">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="25"/>  
+  </message>  
+  <message id="26" operation="ArrayList()">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="27"/>  
+  </message>  
+  <message id="28" operation="hasNext():boolean">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="29"/>  
+  </message>  
+  <message id="30" operation="toMap(com.mongodb.DBObject):java.util.Map&lt;String,Object&gt;">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="31"/>  
+  </message>  
+  <message id="32" operation="next():com.mongodb.DBObject">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="33"/>  
+  </message>  
+  <message id="34" operation="CompletionStatus(wFramework.base.work.CompletionStatus.CompletionFlag)">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="35"/>  
+  </message>  
+  <message id="36" operation="trimIncident(java.util.Map&lt;java.lang.String,java.lang.Object&gt;,boolean):void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="37"/>  
+  </message>  
+  <message id="38" 
+    operation="hasPriviledge(java.lang.String,wFramework.base.Context,wFramework.base.configuration.Configuration):boolean">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="39"/>  
+  </message>  
+  <message id="40" operation="add(E):boolean">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="41"/>  
+  </message>  
+  <message id="42" operation="putUnnamed(java.lang.Object,java.lang.Object):void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="43"/>  
+  </message>  
+  <message id="44" operation="getService(java.lang.Class):wFramework.base.service.Service">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="45"/>  
+  </message>  
+  <message id="46" 
+    operation="reportError(cms.serviceInterfaces.ErrorService.Error,wFramework.base.Context,wFramework.base.configuration.Configuration):void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="47"/>  
+  </message>  
+  <message id="48" operation="newQueryError():cms.serviceInterfaces.ErrorService.Error">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="49"/>  
+  </message>  
+  <message id="50" operation="CompletionStatus(wFramework.base.work.CompletionStatus.CompletionFlag)">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="51"/>  
+  </message>
+</sequence-diagram>

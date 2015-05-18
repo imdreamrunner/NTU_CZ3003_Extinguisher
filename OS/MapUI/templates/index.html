@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crisis @ Singapore - Singapore Crisis Management System</title>
+
+    <link rel='stylesheet' href='/static/stylesheets/bootstrap.min.css' />
+    <!-- this would affect the GSmallMapControl of the map -->
+    <link rel='stylesheet' href='/static/images/square/blue.css' />
+    <link rel='stylesheet' href='/static/stylesheets/slider.css' />
+    <link rel='stylesheet' href='/static/stylesheets/global.css' />
+    <link rel='stylesheet' href='/static/stylesheets/map.css' >
+</head>
+<body>
+
+<div id="float-control">
+    <div id="menu">
+        <h1 id="logo">Crisis @ Singapore</h1>
+        <div id="extend-menu-open"></div>
+        <div id="extended-menu">
+            <a id="incident" class="menu-item" href="javascript:">Incident</a>
+            <a id="timeline" class="menu-item" href="javascript:">Timeline</a>
+            <a id="subscribe" class="menu-item" href="javascript:">Subscribe</a>
+            <div id="extend-menu-close"></div>
+        </div>
+    </div>
+    <div id="about-box" class="float-box">
+        <h3>Singapore Crisis Real-time Map</h3>
+        <p>Welcome to the Singapore Crisis Management System.</p>
+        <div class="hidden">
+            <select id="geo-list" multiple></select>
+            <button id="load-geo">Load</button>
+        </div>
+    </div>
+    <div id="incident-box" class="float-box">
+        <h3>Incident</h3>
+        <h4>Type</h4>
+        <ul class="menu-input-list">
+            <li>
+                <input type="checkbox" id="incident-fire" checked>
+                <label for="incident-fire">Fire</label>
+            </li>
+            <li>
+                <input type="checkbox" id="incident-dengue" checked>
+                <label for="incident-dengue">Dengue</label>
+            </li>
+            <li>
+                <input type="checkbox" id="incident-haze" checked>
+                <label for="incident-haze">Haze</label>
+            </li>
+            <li>
+                <input type="checkbox" id="incident-illness" checked>
+                <label for="incident-illness">Illness</label>
+            </li>
+            <li>
+                <input type="checkbox" id="incident-rescue" checked>
+                <label for="incident-rescue">Rescue</label>
+            </li>
+            <li>
+                <input type="checkbox" id="incident-gas" checked>
+                <label for="incident-gas">Gas leak</label>
+            </li>
+            <li>
+                <input type="checkbox" id="icon-weather" checked>
+                <label for="icon-weather">Weather</label>
+            </li>
+            <li>
+                <input type="checkbox" id="icon-shelter" checked>
+                <label for="icon-shelter">CD shelter</label>
+            </li>
+        </ul>
+        <!--
+        <button id="create-marker" class="btn btn-default">Display Marker</button>
+        -->
+        <!--
+        <input type="radio" name="iCheck"> Test 3
+        <input type="radio" name="iCheck" checked> Test 4
+        -->
+    </div>
+    <div id="timeline-box" class="float-box">
+        <h3>Timeline</h3>
+        <p>
+            <div id="slider"></div>
+        </p>
+        <p class="slider-tips">Valid from: <span id="slider-from">now</span></p>
+        <p class="slider-tips">To: <span id="slider-to">future</span></p>
+    </div>
+    <div id="subscribe-box" class="float-box">
+        <h3>Subscribe</h3>
+        <p>
+            You can subscribe to the incident alert
+            <a href="{{ subscribe_address }}addsubscription" target="_blank">here</a>.
+        </p>
+    </div>
+</div>
+
+<div id="map"></div>
+
+<div id="footer">&copy; 2014 CMS Singapore</div>
+
+<script type="text/javascript" src="http://gothere.sg/jsapi?sensor=false"> </script>
+
+<script src="/static/javascripts/jquery-2.1.0.min.js"></script>
+<script src="/static/javascripts/bootstrap.min.js"></script>
+<script src="/static/javascripts/bootstrap-slider.js"></script>
+<script src="/static/javascripts/icheck.min.js"></script>
+<script src="/static/javascripts/geo.js"></script>
+<script src="/static/javascripts/map.js"></script>
+</body>
+</html>

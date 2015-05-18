@@ -1,0 +1,147 @@
+html,
+body {
+  height: 100%;
+}
+#map {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 25px;
+}
+#footer {
+  position: absolute;
+  background: #FFF;
+  height: 25px;
+  width: 100%;
+  z-index: 10000;
+  bottom: 0;
+  text-align: center;
+  color: #777;
+  line-height: 25px;
+}
+#float-control {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10000;
+}
+#menu {
+  height: 35px;
+  background: #006699;
+  background: linear-gradient(to bottom, #2095cf 0%, #006699 100%);
+  box-shadow: 1px 1px 4px 0 #333;
+  cursor: default;
+  z-index: 10002;
+}
+h1 {
+  float: left;
+  display: block;
+  font-size: 16px;
+  color: #FFF;
+  margin: 0;
+  line-height: 35px;
+  padding: 0 15px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", sans-serif;
+}
+h1:hover {
+  background-color: #045a84;
+}
+h1.active {
+  background-color: #045a84;
+}
+#extend-menu-open,
+#extend-menu-close {
+  float: left;
+  width: 35px;
+  height: 35px;
+  border-left: 1px solid #6b9db6;
+}
+#extend-menu-open:hover,
+#extend-menu-close:hover {
+  background-color: #045a84;
+}
+#extend-menu-open {
+  background: url('../images/map-extend-right.png') center no-repeat;
+}
+#extend-menu-close {
+  background: url('../images/map-extend-left.png') center no-repeat;
+  margin-left: 10px;
+}
+#extended-menu {
+  display: none;
+  float: left;
+  border-left: 1px solid #6b9db6;
+  padding: 0 0 0 10px;
+}
+#extended-menu a.menu-item {
+  display: block;
+  float: left;
+  line-height: 35px;
+  padding: 0 10px;
+  color: #FFF;
+  text-decoration: none;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", sans-serif;
+  cursor: default;
+}
+#extended-menu a.menu-item:hover {
+  background-color: #045a84;
+}
+#extended-menu a.menu-item.active {
+  background-color: #045a84;
+  border-left: 1px solid #6b9db6;
+  border-right: 1px solid #6b9db6;
+  padding: 0 9px;
+}
+.float-box {
+  display: none;
+  position: absolute;
+  top: 35px;
+  z-index: 10001;
+  background: #FFF;
+  height: 150px;
+  width: 450px;
+  box-shadow: 1px 1px 4px 0 #333;
+  padding: 10px 20px;
+}
+.float-box h3 {
+  margin: 10px 0;
+  padding: 0;
+  font-size: 20px;
+  color: #993333;
+}
+.float-box h4 {
+  color: #666;
+  font-size: 16px;
+  font-weight: normal;
+  border-bottom: 1px dashed #CCC;
+  padding: 4px 0;
+  margin: 10px 0;
+}
+.float-box p {
+  margin: 10px 0;
+}
+#incident-box {
+  width: 400px;
+  height: 220px;
+}
+.menu-input-list {
+  padding: 0 20px;
+}
+.menu-input-list li {
+  display: block;
+  width: 50%;
+  float: left;
+}
+#slider {
+  width: 400px;
+}
+.slider {
+  width: 400px !important;
+}
+.slider-tips {
+  text-align: right;
+}
+.slider-tips span {
+  text-align: left;
+  display: inline-block;
+  width: 200px;
+}

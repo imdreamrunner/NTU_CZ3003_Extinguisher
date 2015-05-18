@@ -1,0 +1,68 @@
+from email.mime.base import MIMEBase
+import os
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email import Encoders
+import threading
+
+
+file_path = os.path.dirname(os.path.realpath(__file__)) + "/"
+
+
+class EmailSender(threading.Thread):
+    def __init__(self, username, password, message=''):
+        threading.Thread.__init__(self)
+        self.sender = username
+        self.message = message
+        try:
+            self.session = smtplib.SMTP('smtp.gmail.com:587')
+            self.session.ehlo()
+            self.session.starttls()
+            self.session.login(username, password)
+            print "Email server is ready"
+        except smtplib.SMTPException:
+            print "Unable to connect to SMTP server"
+
+    def send_email_to(self, receiver, subject, body, file_name):
+        """ send one email to receiver, with given subject line and body
+
+        Body will be sent in format of HTML.
+        Differentiate this method with run() which sends email to all users.
+        """
+        msg = MIMEMultipart('alternative')
+        msg['Subject'] = subject
+        msg['From'] = self.sender
+        msg['To'] = receiver
+
+        html_body = MIMEText(body, 'html')
+        msg.attach(html_body)
+
+        f = file_path + file_name
+
+        part = MIMEBase('application', "octet-stream")
+        part.set_payload(open(f, "rb").read())
+        Encoders.encode_base64(part)
+        part.add_header('Content-Disposition', 'attachment; filename="%s"' % os.path.basename(f))
+        msg.attach(part)
+
+        try:
+            self.session.sendmail(self.sender, receiver, msg.as_string())
+            print "An email has been sent to", receiver
+        except smtplib.SMTPException:
+            print "Error: unable to send email"
+
+    def run(self):
+        """Trigger thread run and send message (given during construction) to all subscribed users
+        """
+        # subscriptions = Subscription.query.all()
+        subscriptions = []
+        for s in subscriptions:
+            if s.email_verified == 1:
+                self.send_email_to(s.email, "SG Incidents: New Incident Reported in Your Area", self.message)
+
+
+if __name__ == '__main__':
+    email_client = EmailSender('incidentsinsg@gmail.com', 'incidents', "test")
+    email_client.start()
+    email_client.send_email_to("zhou0199@e.ntu.edu.sg", "title", "body", "test.txt")

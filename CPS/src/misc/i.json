@@ -1,0 +1,13 @@
+{
+    "parent": null,
+    "type": "Fire",
+    "location": [{"type":"gps","lat":3.4,"lng":3.5},
+    	{"type":"polygonal","points":[{"lat":4.5,"lng":3.4},{"lat":4.5,"lng":3.4},{"lat":4.5,"lng":3.4}]}],
+    "level" : 1,
+    "startTime": "2014-03-09T11:45:42.069Z",
+    "completeTime": null,
+	"valid": true,    
+	"operator": {},
+	"reporter": {},
+	"remark": "trying"
+}

@@ -1,0 +1,8 @@
+{
+    "query": {
+    		"_id":["532aa21f44ae9be171877291","532ab0bd44ae206516668b02"],
+		    "type": ["Fire","Haze"]
+		},
+    "operator": {}
+}
+
